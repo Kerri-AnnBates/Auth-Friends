@@ -1,3 +1,6 @@
+import axios from 'axios';
+
+// function to make authenticated call to the api.
 const axiosWithAuth = () => {
     const token = localStorage.getItem('token');
 
