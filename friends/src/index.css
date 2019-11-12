@@ -1,13 +1,92 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+}
+
+nav {
+  padding: 20px 0;
+}
+
+nav a {
+  color: #fff;
+  padding: 5px;
+  margin: 0 10px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+h1 {
+  color: #ECF0F1;
+}
+
+.login, .add-form {
+  background: #fefefe;
+  max-width: 500px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+label {
+  width: 100%;
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid #243949;
+  font-size: 18px;
+}
+
+button {
+  padding: 5px 10px;
+  border: 2px solid #517fa4;
+  background: #517fa4;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.added {
+  padding: 5px 10px;
+  background: #50cc7f;
+  color: #fff;
+  font-size: 20px;
+}
+
+.card {
+  width: 30%;
+  padding: 10px;
+  border-radius: 5px;
+  background: #fefefe;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.card h3 {
+  text-align: center;
+  border-bottom: 2px solid #F0B96D;
+  padding-bottom: 5px;
+}
+
+.card span {
+  color: #5C5AA8;
+  font-weight: bold;
+}
+
+.friends-list {
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }

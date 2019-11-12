@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import axiosWithAuth from '../axiosWithAuth';
 import FriendsCard from './FriendsCard';
 import AddFriend from './AddFriend';
@@ -19,10 +19,12 @@ const FriendsList = () => {
     return (
         <div>
             <h1>Friends List</h1>
-            <AddFriend />
-            {friends.map(friend => (
-                <FriendsCard friend={friend} key={friend.id} />
-            ))}
+            {/* <AddFriend /> */}
+            <div className="friends-list">
+                {friends.map(friend => (
+                    <FriendsCard friend={friend} key={friend.id} />
+                ))}
+            </div>
         </div>
     )
 }

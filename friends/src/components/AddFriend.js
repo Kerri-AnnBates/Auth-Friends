@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState } from 'react'
 import axiosWithAuth from '../axiosWithAuth';
 
 const AddFriend = () => {
@@ -9,14 +9,15 @@ const AddFriend = () => {
         age: '',
         email: ''
     });
+    const [friendAdded, setFriendAdded] = useState(false);
 
     const handleChange = (e) => {
         setnewFriend({ ...newFriend, [e.target.name]: e.target.value });
     }
-    
+
     // function for age to convert value to a number.
     const handleAgeChange = (e) => {
-        setnewFriend({...newFriend, age: Number(e.target.value)});
+        setnewFriend({ ...newFriend, age: Number(e.target.value) });
     }
 
 
@@ -26,16 +27,22 @@ const AddFriend = () => {
         axiosWithAuth().post('http://localhost:5000/api/friends', newFriend)
             .then(res => {
                 console.log(res);
+                setFriendAdded(true);
             })
             .catch(err => {
                 console.log(err);
             })
-        
+        setnewFriend({
+            ...newFriend,
+            name: '',
+            age: '',
+            email: ''
+        })
     }
 
     return (
-        <div>
-            <form onSubmit={(e) => addNewFriend(e) }>
+        <div className="add-form">
+            <form onSubmit={(e) => addNewFriend(e)}>
                 <label htmlFor="name">Name: <input
                     type="text"
                     name="name"
@@ -59,6 +66,7 @@ const AddFriend = () => {
                 /></label>
                 <button>Submit</button>
             </form>
+            {friendAdded ? (<p className="added">Friend has been added</p>) : ''}
         </div>
     )
 }

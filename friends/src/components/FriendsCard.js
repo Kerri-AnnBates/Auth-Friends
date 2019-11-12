@@ -6,8 +6,8 @@ const FriendsCard = (props) => {
     return (
         <div className="card">
             <h3>{friend.name}</h3>
-            <p>Age: {friend.name}</p>
-            <p>Email: {friend.email}</p>
+            <p><span>Age</span>: {friend.name}</p>
+            <p><span>Email</span>: {friend.email}</p>
         </div>
     )
 }
