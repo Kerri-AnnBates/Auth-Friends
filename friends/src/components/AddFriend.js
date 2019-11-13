@@ -42,6 +42,7 @@ const AddFriend = () => {
 
     return (
         <div className="add-form">
+            <h2>Add Friend</h2>
             <form onSubmit={(e) => addNewFriend(e)}>
                 <label htmlFor="name">Name: <input
                     type="text"

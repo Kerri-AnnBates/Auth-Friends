@@ -55,6 +55,11 @@ button {
   color: #fff;
   border-radius: 5px;
   font-size: 18px;
+  margin-right: 10px;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .added {
