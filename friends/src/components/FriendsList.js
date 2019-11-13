@@ -31,7 +31,7 @@ const FriendsList = () => {
     return (
         <div>
             <h1>Friends List</h1>
-            {/* <AddFriend /> */}
+            
             <div className="friends-list">
                 {friends.map(friend => (
                     <FriendsCard 
